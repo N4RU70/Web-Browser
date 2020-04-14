@@ -4,10 +4,8 @@ import javafx.application.Application;
 import javafx.collections.ListChangeListener;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Paint;
-import javafx.scene.shape.Box;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebHistory;
@@ -76,18 +74,18 @@ public class main extends Application  {
             Button x = new Button(" x ");
             Button s = new Button(" - ");
             Button bo = new Button(" □ ");
-
+            x.setOnAction(i -> System.exit(0));
             m3.setOnAction(i -> System.exit(0));
 
 
 
             MenuBar wd = new MenuBar();
             TextField t = new TextField ();
+            t.setOnAction(i -> e.load(t.getText()));
             mb.getMenus().addAll(m,m4);
             Button b = new Button("->");
             b.setOnAction(i -> e.load(t.getText()));
-            b.setStyle("-fx-background-color:Transparent;");
-            b.setScaleY(.812);
+            b.setStyle("-fx-background-color:Transparent;-fx-font-size:12;");
 
 
             mb.setTranslateY(-.5*w.getPrefHeight());
@@ -98,7 +96,7 @@ public class main extends Application  {
             w.setTranslateY(.055*w.getPrefHeight());
             t.setTranslateX(.1*w.getPrefWidth());
             b.setTranslateY(-.5*w.getPrefHeight()-0.31);
-            b.setTranslateX(.41*w.getPrefWidth());
+            b.setTranslateX(.43*w.getPrefWidth());
             x.setTranslateY(-.555*w.getPrefHeight());
             s.setTranslateY(-.555*w.getPrefHeight());
             bo.setTranslateY(-.555*w.getPrefHeight());
