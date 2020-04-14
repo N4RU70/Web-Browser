@@ -7,7 +7,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebHistory;
 import javafx.scene.web.WebView;
@@ -140,11 +139,11 @@ public class main extends Application  {
                 c.next();
                 for (WebHistory.Entry e1 : c.getAddedSubList()) {
 
-                    t.setText(e1.getUrl().toString());
-                    if(e.getLocation().toString().replace("https://","").substring(e.getLocation().toString().indexOf("www")+1,e.getLocation().indexOf("com")-5) == "start.duckduckgo.com") {
+                    t.setText(e1.getUrl());
+                    if(e.getLocation().replace("https://", "").substring(e.getLocation().indexOf("www") + 1, e.getLocation().indexOf("com") - 5).equals("start.duckduckgo.com")) {
                         t1.setText("New Tab");
                     } else {
-                        t1.setText(e.getLocation().toString().replace("https://", "").substring(e.getLocation().toString().indexOf("www") + 1, e.getLocation().indexOf("com") - 5));
+                        t1.setText(e.getLocation().replace("https://", "").substring(e.getLocation().indexOf("www") + 1, e.getLocation().indexOf("com") - 5));
                     }
                 }
             }
