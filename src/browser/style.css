@@ -1,0 +1,66 @@
+.menu-bar {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.context-menu {
+    -fx-background-color: #222222;
+}
+
+.menu-bar .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Proxima Nova";
+    -fx-text-fill: white;
+}
+
+.text-field {
+  -fx-border-color: #333333;
+  -fx-background-color: #111111;
+  -fx-text-fill: #888888;
+}
+
+.text-field:focused {
+    -fx-border-color: #333333;
+    -fx-background-color: #111111;
+    -fx-text-fill: #FFFFFF;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size:12pt;
+}
+
+.button:hover {
+    -fx-background-color: #888888;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size:12pt;
+}
+
+.button:pressed {
+    -fx-background-color: #333333;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size:12pt;
+}
+
+
+
+.menu:hover {
+    -fx-background-color: #888888;
+}
+
+.menu-item:hover {
+    -fx-background-color: #888888;
+}
+
+.menu-item:focused {
+    -fx-background-color: #888888;
+}
+
+.menu:showing {
+    -fx-background-color: #888888;
+}
+
+.box {
+    -fx-background-color: #888888;
+}
