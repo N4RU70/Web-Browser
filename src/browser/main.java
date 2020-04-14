@@ -37,6 +37,7 @@ public class main extends Application  {
             tabs.setTranslateY(-.548*w.getPrefHeight());
             tabs.setFill(Paint.valueOf("#333333"));
 
+
             rect.setX(0);
             rect.setY(0);
             rect.setWidth(w.getPrefWidth());
@@ -90,7 +91,6 @@ public class main extends Application  {
             TextField t = new TextField ();
             TextField t1 = new TextField ();
             t1.setMaxWidth(.2*w.getPrefWidth());
-            t1.setStyle("-fx-background-color:Transparent;-fx-border-color:Transparent;-fx-text-fill:white;");
             t.setOnAction(i -> e.load(t.getText()));
             mb.getMenus().addAll(m,m4);
             Button b = new Button("->");
@@ -116,6 +116,8 @@ public class main extends Application  {
             tabs.setTranslateX(-.36*w.getPrefWidth());
             t1.setTranslateY(-.55*w.getPrefHeight());
             t1.setTranslateX(-.35*w.getPrefWidth());
+            t1.setDisable(true);
+            t1.setStyle("-fx-background-color:Transparent;-fx-border-color:Transparent;-fx-text-fill:white;-fx-opacity: 1;");
 
 
             rootPane.getChildren().addAll(rect,rect1,tabs,t1,w,mb,t,b,s,bo,x);
