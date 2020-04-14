@@ -25,6 +25,11 @@
     -fx-text-fill: #FFFFFF;
 }
 
+#red:hover {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+}
+
 .button {
     -fx-background-color: transparent;
     -fx-text-fill: #FFFFFF;

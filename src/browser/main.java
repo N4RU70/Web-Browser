@@ -83,6 +83,7 @@ public class main extends Application  {
             Button s = new Button(" - ");
             Button bo = new Button(" □ ");
             x.setOnAction(i -> System.exit(0));
+            x.setId("red");
             m3.setOnAction(i -> System.exit(0));
 
 
