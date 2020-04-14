@@ -84,8 +84,10 @@ public class main extends Application  {
             MenuBar wd = new MenuBar();
             TextField t = new TextField ();
             mb.getMenus().addAll(m,m4);
-            Button b = new Button("Go");
+            Button b = new Button("->");
             b.setOnAction(i -> e.load(t.getText()));
+            b.setStyle("-fx-background-color:Transparent;");
+            b.setScaleY(.812);
 
 
             mb.setTranslateY(-.5*w.getPrefHeight());
@@ -94,9 +96,9 @@ public class main extends Application  {
             wd.setMaxWidth(.15*w.getPrefWidth());
             t.setTranslateY(-.5*w.getPrefHeight());
             w.setTranslateY(.055*w.getPrefHeight());
-            t.setTranslateX(.08*w.getPrefWidth());
-            b.setTranslateY(-.5*w.getPrefHeight()-1);
-            b.setTranslateX(.42*w.getPrefWidth());
+            t.setTranslateX(.1*w.getPrefWidth());
+            b.setTranslateY(-.5*w.getPrefHeight()-0.31);
+            b.setTranslateX(.41*w.getPrefWidth());
             x.setTranslateY(-.555*w.getPrefHeight());
             s.setTranslateY(-.555*w.getPrefHeight());
             bo.setTranslateY(-.555*w.getPrefHeight());
@@ -119,7 +121,7 @@ public class main extends Application  {
             b.setMaxSize(60,30);
 
             t.setText(e.getLocation());
-            t.setMaxWidth(.6*w.getPrefWidth());
+            t.setMaxWidth(.725*w.getPrefWidth());
             stage.show();
 
             final WebHistory history = e.getHistory();
