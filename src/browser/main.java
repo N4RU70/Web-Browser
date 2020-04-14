@@ -7,14 +7,13 @@ import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebHistory;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-//test
 public class main extends Application  {
-
 
     public void start(Stage stage) {
 
@@ -27,11 +26,20 @@ public class main extends Application  {
 
             WebView w = new WebView();
 
+
+            Rectangle tabs = new Rectangle();
             Rectangle rect = new Rectangle();
             Rectangle rect1 = new Rectangle();
 
-            rect.setX(10);
-            rect.setY(20);
+            tabs.setX(10);
+            tabs.setY(20);
+            tabs.setWidth(.2*w.getPrefWidth());
+            tabs.setHeight(.048*w.getPrefHeight());
+            tabs.setTranslateY(-.548*w.getPrefHeight());
+            tabs.setFill(Paint.valueOf("#333333"));
+
+            rect.setX(0);
+            rect.setY(0);
             rect.setWidth(w.getPrefWidth());
             rect.setHeight(.055*w.getPrefHeight());
             rect.setTranslateY(-.555*w.getPrefHeight());
@@ -81,6 +89,9 @@ public class main extends Application  {
 
             MenuBar wd = new MenuBar();
             TextField t = new TextField ();
+            TextField t1 = new TextField ();
+            t1.setMaxWidth(.2*w.getPrefWidth());
+            t1.setStyle("-fx-background-color:Transparent;-fx-border-color:Transparent;-fx-text-fill:white;");
             t.setOnAction(i -> e.load(t.getText()));
             mb.getMenus().addAll(m,m4);
             Button b = new Button("->");
@@ -103,9 +114,12 @@ public class main extends Application  {
             x.setTranslateX(.47*w.getPrefWidth());
             s.setTranslateX(.37*w.getPrefWidth());
             bo.setTranslateX(.42*w.getPrefWidth());
+            tabs.setTranslateX(-.36*w.getPrefWidth());
+            t1.setTranslateY(-.55*w.getPrefHeight());
+            t1.setTranslateX(-.35*w.getPrefWidth());
 
 
-            rootPane.getChildren().addAll(rect,rect1,w,mb,t,b,s,bo,x);
+            rootPane.getChildren().addAll(rect,rect1,tabs,t1,w,mb,t,b,s,bo,x);
 
             Scene scene = new Scene(rootPane, w.getPrefWidth(),
                     w.getPrefHeight()*1.16);
@@ -121,12 +135,17 @@ public class main extends Application  {
             t.setText(e.getLocation());
             t.setMaxWidth(.725*w.getPrefWidth());
             stage.show();
-
             final WebHistory history = e.getHistory();
             history.getEntries().addListener((ListChangeListener<WebHistory.Entry>) c -> {
                 c.next();
                 for (WebHistory.Entry e1 : c.getAddedSubList()) {
-                    t.setText(e1.getUrl());
+
+                    t.setText(e1.getUrl().toString());
+                    if(e.getLocation().toString().replace("https://","").substring(e.getLocation().toString().indexOf("www")+1,e.getLocation().indexOf("com")-5) == "start.duckduckgo.com") {
+                        t1.setText("New Tab");
+                    } else {
+                        t1.setText(e.getLocation().toString().replace("https://", "").substring(e.getLocation().toString().indexOf("www") + 1, e.getLocation().indexOf("com") - 5));
+                    }
                 }
             }
             );
