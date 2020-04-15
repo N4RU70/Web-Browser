@@ -79,11 +79,17 @@ public class main extends Application  {
 
             MenuBar mb = new MenuBar();
 
-            Button x = new Button(" x ");
-            Button s = new Button(" - ");
-            Button bo = new Button(" □ ");
+            Button x = new Button("x");
+            Button s = new Button("-");
+            Button bo = new Button("□");
             x.setOnAction(i -> System.exit(0));
             x.setId("red");
+            x.setMinSize(35,30);
+            x.setMaxSize(35,30);
+            s.setMinSize(35,30);
+            s.setMaxSize(35,30);
+            bo.setMinSize(35,30);
+            bo.setMaxSize(35,30);
             m3.setOnAction(i -> System.exit(0));
 
 
