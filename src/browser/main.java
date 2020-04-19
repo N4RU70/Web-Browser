@@ -117,9 +117,9 @@ public class main extends Application {
             x.setTranslateY(-.555 * w.getPrefHeight());
             s.setTranslateY(-.555 * w.getPrefHeight());
             bo.setTranslateY(-.555 * w.getPrefHeight());
-            x.setTranslateX(.47 * w.getPrefWidth());
-            s.setTranslateX(.37 * w.getPrefWidth());
-            bo.setTranslateX(.42 * w.getPrefWidth());
+            x.setTranslateX(.477 * w.getPrefWidth());
+            s.setTranslateX(.3777 * w.getPrefWidth());
+            bo.setTranslateX(.4277 * w.getPrefWidth());
             tabs.setTranslateX(-.36 * w.getPrefWidth());
             t1.setTranslateY(-.55 * w.getPrefHeight());
             t1.setTranslateX(-.35 * w.getPrefWidth());
