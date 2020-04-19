@@ -22,7 +22,7 @@ public class main extends Application {
 
             stage.initStyle(StageStyle.UNDECORATED);
 
-            stage.setTitle("JavaFX WebBrowser");
+            stage.setTitle("Web Browser");
 
             WebView w = new WebView();
 

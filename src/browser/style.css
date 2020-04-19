@@ -34,18 +34,21 @@
     -fx-background-color: transparent;
     -fx-text-fill: #FFFFFF;
     -fx-font-size:12pt;
+    -fx-background-radius:0;
 }
 
 .button:hover {
     -fx-background-color: #888888;
     -fx-text-fill: #FFFFFF;
     -fx-font-size:12pt;
+    -fx-background-radius:0;
 }
 
 .button:pressed {
     -fx-background-color: #333333;
     -fx-text-fill: #FFFFFF;
     -fx-font-size:12pt;
+    -fx-background-radius:0;
 }
 
 
